@@ -61,6 +61,10 @@ POST {{host}}/auth/login
 
 #### Login Response
 
+```js
+200 OK
+```
+
 ```json
 {
   "id": "2e54106f-4be0-4b69-987a-8e37a8bcf10d",
