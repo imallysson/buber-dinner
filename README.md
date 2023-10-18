@@ -10,3 +10,4 @@ Back-End:
 * CQRS
 * Mediator (MediatR)
 * Mapster
+* FluentValidation
