@@ -8,3 +8,4 @@ Back-End:
 * DDD
 * Repository pattern
 * CQRS
+* Mediator (MediatR)
