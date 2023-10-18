@@ -1,4 +1,4 @@
-﻿using BuberDinner.Application.Common.Services;
+﻿using BuberDinner.Application.Services;
 
 namespace BuberDinner.Infrastructure.Services;
 
