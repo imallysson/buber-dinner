@@ -9,3 +9,4 @@ Back-End:
 * Repository pattern
 * CQRS
 * Mediator (MediatR)
+* Mapster
