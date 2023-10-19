@@ -1,6 +1,6 @@
-namespace BuberDinner.Domain.Entities;
+namespace BuberDinner.Domain.User;
 
-public class User
+public sealed class User
 {
     public Guid Id { get; set; } = Guid.NewGuid();
     public string FirstName { get; set; } = null!;
