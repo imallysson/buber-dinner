@@ -33,7 +33,7 @@ public class BuberDinnerProblemDetailsFactory : ProblemDetailsFactory
             Title = title,
             Type = type,
             Detail = detail,
-            Instance = instance
+            Instance = instance,
         };
 
         ApplyProblemDetailsDefaults(httpContext, problemDetails, statusCode.Value);
