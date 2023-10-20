@@ -34,7 +34,7 @@ public static class DependencyInjection
         this IServiceCollection services)
     {
         services.AddDbContext<BuberDinnerDbContext>(options =>
-            options.UseSqlServer());
+            options.UseSqlServer("Server=localhost;Database=BuberDinner;User Id=sa;Password=password123!;TrustServerCertificate=true"));
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
