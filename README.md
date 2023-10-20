@@ -1,5 +1,5 @@
-Buber Dinner
----
+# Buber Dinner
+
 [Amichai Mantinband Clean Arch & DDD series](https://www.youtube.com/@amantinband)
 
 Back-End:
@@ -21,3 +21,4 @@ Back-End:
 * [Mapster](https://github.com/MapsterMapper/Mapster)
 * [FluentValidation](https://github.com/FluentValidation/FluentValidation)
 * [ErrorOr](https://github.com/amantinband/error-or)
+* [EF Core](https://github.com/dotnet/efcore)

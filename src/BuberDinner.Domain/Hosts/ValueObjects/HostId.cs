@@ -4,7 +4,7 @@ namespace BuberDinner.Domain.Hosts.ValueObjects;
 
 public sealed class HostId : ValueObject
 {
-    public Guid Value { get; }
+    public Guid Value { get; private set; }
 
     public HostId(Guid value)
     {
@@ -21,8 +21,19 @@ public sealed class HostId : ValueObject
         return new(Guid.Parse(value));
     }
 
+    public static HostId Create(Guid value)
+    {
+        return new(value);
+    }
+
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private HostId()
+    {
+    }
+#pragma warning restore CS8618
 }

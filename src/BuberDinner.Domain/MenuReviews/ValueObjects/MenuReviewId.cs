@@ -4,7 +4,7 @@ namespace BuberDinner.Domain.MenuReviews.ValueObjects;
 
 public sealed class MenuReviewId : ValueObject
 {
-    public Guid Value { get; }
+    public Guid Value { get; private set; }
 
     public MenuReviewId(Guid value)
     {
@@ -20,4 +20,10 @@ public sealed class MenuReviewId : ValueObject
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private MenuReviewId()
+    {
+    }
+#pragma warning restore CS8618
 }

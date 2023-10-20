@@ -4,7 +4,7 @@ namespace BuberDinner.Domain.Dinners.ValueObjects;
 
 public sealed class DinnerId : ValueObject
 {
-    public Guid Value { get; }
+    public Guid Value { get; private set; }
 
     public DinnerId(Guid value)
     {
@@ -20,4 +20,10 @@ public sealed class DinnerId : ValueObject
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private DinnerId()
+    {
+    }
+#pragma warning restore CS8618
 }
