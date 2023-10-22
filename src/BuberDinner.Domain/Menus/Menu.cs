@@ -33,7 +33,8 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
         string description,
         AverageRating averageRating,
         DateTime createdDateTime,
-        DateTime updatedDateTime)
+        DateTime updatedDateTime,
+        List<MenuSection>? sections = null)
         : base(menuId)
     {
         Name = name;
@@ -42,6 +43,7 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
         HostId = hostId;
         CreatedDateTime = createdDateTime;
         UpdatedDateTime = updatedDateTime;
+        _sections = sections ?? new();
     }
 
     public static Menu Create(
@@ -57,7 +59,8 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
             description,
             AverageRating.CreateNew(),
             DateTime.UtcNow,
-            DateTime.UtcNow);
+            DateTime.UtcNow,
+            sections);
 
         menu.AddDomainEvent(new MenuCreated(menu));
 
